@@ -24,4 +24,4 @@ setInterval(function() {
         localStorage.setItem("plusbb", plusbb.toFixed(20));
         localStorage.removeItem("bb")
         localStorage.setItem("bb", bb.toFixed(20));
-}, 100 );
+}, 500 );
