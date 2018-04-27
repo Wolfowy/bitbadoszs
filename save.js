@@ -1,27 +1,27 @@
 setInterval(function() {
-		if (localStorage.getItem("bb") !== null)
-		{
-			var bb = Number(localStorage.getItem("bb"));
-		} else {
-			var bb = 0;
-		}
+        if (localStorage.getItem("bb") !== null)
+        {
+            var bb = parseFloat(localStorage.getItem("bb"));
+        } else {
+            var bb = 0;
+        }
 
-		if (localStorage.getItem("plusbb") !== null)
-		{
-			var plusbb = Number(localStorage.getItem("plusbb"));
-		} else {
-			var plusbb = 1;
-		}
+        if (localStorage.getItem("plusbb") !== null)
+        {
+            var plusbb = parseFloat(localStorage.getItem("plusbb"));
+        } else {
+            var plusbb = 0.00000000000000000001;
+        }
 
-		if (localStorage.getItem("x") !== null){
-			var x = Number(localStorage.getItem("bb"));
-		} else {
-			var x = 0;
-		}
-	localStorage.removeItem("x");
-	localStorage.removeItem("plusbb");
-	localStorage.removeItem("bb")
-	localStorage.setItem("x", x);
-	localStorage.setItem("bb", bb);
-	localStorage.setItem("plusbb", plusbb);
+        if (localStorage.getItem("x") !== null){
+            var x = parseFloat(localStorage.getItem("x"));
+        } else {
+            var x = 0;
+        }
+        localStorage.removeItem("x");
+        localStorage.setItem("x", x.toFixed(20));
+        localStorage.removeItem("plusbb");
+        localStorage.setItem("plusbb", plusbb.toFixed(20));
+        localStorage.removeItem("bb")
+        localStorage.setItem("bb", bb.toFixed(20));
 }, 100 );
